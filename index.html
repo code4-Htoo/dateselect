@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Select</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <section class="sec-common sec-contact">
+      <div class="l-inner">
+        <form class="form">
+          <div class="field">
+            <label class="cmn-lbl"><span>＊</span>生年月日</label>
+            <div class="d-flex">
+              <select class="cmn-select" id="year" required>
+                <option value="0" selected hidden disabled>1950年</option>
+              </select>
+              <select class="cmn-select" id="month" required>
+                <option value="0" selected hidden disabled>12月</option>
+              </select>
+              <select class="cmn-select" id="day" required>
+                <option value="0" selected hidden disabled>31日</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label class="cmn-lbl">性別</label>
+            <select class="cmn-select">
+              <option selected hidden disabled>-</option>
+              <option>女性</option>
+              <option>男性</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="cmn-lbl">家族構成</label>
+            <p class="d-flex">
+              <label class="checkbox-blk cmn-lbl">既婚
+                <input type="checkbox" value="既婚">
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-blk cmn-lbl">お子様有
+                <input type="checkbox" value="お子様有">
+                <span class="checkmark"></span>
+              </label>
+            </p>
+          </div>
+          <div class="field">
+            <label class="cmn-lbl"><span>＊</span>お問い合わせ項目</label>
+            <select class="cmn-select inquiry-item" required>
+              <option value="" selected hidden disabled>-</option>
+              <option value="contactus">お問い合わせ</option>
+              <option value="request">資料請求</option>
+            </select>
+          </div>
+          <div class="field contact-select-blk">
+            <label class="cmn-lbl"><span>＊</span>お問い合わせ内容</label>
+            <textarea class="cmn-input" required></textarea>
+          </div>
+          <div class="document-select-blk">
+            <div class="field">
+              <p class="d-flex">
+                <label class="checkbox-blk cmn-lbl">郵便
+                  <input type="checkbox" value="郵便">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-blk cmn-lbl">Web
+                  <input type="checkbox" value="Web">
+                  <span class="checkmark"></span>
+                </label>
+              </p>
+            </div>
+            <div class="field">
+              <label class="cmn-lbl"><span>＊</span>郵便番号</label>
+              <input type="text" class="cmn-input" required>
+            </div>
+            <div class="field">
+              <label class="cmn-lbl"><span>＊</span>都道府県</label>
+              <input type="text" class="cmn-input" required>
+            </div>
+            <div class="field address">
+              <div class="d-flex">
+                <div class="col">
+                  <label class="cmn-lbl"><span>＊</span>市区町村</label>
+                  <input type="text" class="cmn-input" required>
+                </div>
+                <div class="col">
+                  <label class="cmn-lbl"><span>＊</span>番地</label>
+                  <input type="text" class="cmn-input" required>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <label class="cmn-lbl"><span>＊</span>建物名・部屋番号</label>
+              <input type="text" class="cmn-input" required>
+            </div>
+          </div>
+          <div class="field privacy">
+            <label class="checkbox-blk cmn-lbl">
+              <a href="#">プライバシーポリシー</a>に同意する
+              <input type="checkbox" value="プライバシーポリシーに同意する">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="btn-blk">
+            <button class="cmn-btn">入力内容を確認する</button>
+          </div>
+        </form>
+      </div>
+    </section><!-- /.sec-contact -->
+  </div><!-- /.wrapper -->
+
+  <script src="./js/lib/jquery-3.7.1.min.js"></script>
+  <script src="./js/common.js"></script>
+</body>
+
+</html>

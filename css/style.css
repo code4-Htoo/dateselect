@@ -1,0 +1,470 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "Ryo Gothic PlusN";
+  font-weight: 400;
+  src: url("../fonts/RyoGothicPlusN-R.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #ffffff;
+  color: #34343b;
+  font-family: "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.8s;
+  -webkit-transition: 0.8s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    opacity: 0.6;
+  }
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+.l-inner {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+.pc{
+  display: block;
+}
+
+.sp{
+  display: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Mainvisual Content */
+.sec-mv {
+  position: relative;
+  height: 100vh;
+  padding: 28vh 0 15vh;
+  background: url("../img/img_mv_bg.jpg") no-repeat center/cover;
+}
+
+.sec-mv::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 30px;
+  background-color: #e2e8eb;
+  content: "";
+}
+
+/* Button */
+.cmn-btn {
+  display: block;
+  position: relative;
+  width: 288px;
+  line-height: 1.25;
+  margin: 0 auto;
+  padding: 27px 10px;
+  border: 1px solid rgba(13, 13, 15, 0.87);
+  background-color: rgba(13, 13, 15, 0.87);
+  color: #d5d5d5;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 2.7px;
+  transition: border 0.5s, background-color 0.5s, color 0.5s;
+}
+
+.cmn-btn::before,
+.cmn-btn::after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.cmn-btn::before {
+  left: 30px;
+  width: 13px;
+  height: 13px;
+  background: url("../img/ico_square01.png") no-repeat center/contain;
+  transition: all 0.5s;
+}
+
+.cmn-btn::after {
+  right: 30px;
+  width: 14px;
+  height: 5px;
+  background: url("../img/ico_right_arr02.png") no-repeat center/contain;
+  transition: right 0.5s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a.cmn-btn{
+    opacity: 1;
+  }
+
+  .cmn-btn:hover {
+    border: 1px solid #7cbe41;
+    background-color: #7cbe41;
+    color: #ffffff;
+  }
+
+  .cmn-btn:hover::before {
+    background: url("../img/ico_square02.png") no-repeat center/contain;
+  }
+
+  .cmn-btn:hover::after {
+    right: 22px;
+    background: url("../img/ico_right_arr04.png") no-repeat center/contain;
+  }
+}
+
+/* Common Content */
+.sec-common {
+  padding: 66px 0 111px;
+}
+
+.sec-common .btn-blk {
+  text-align: center;
+}
+
+.sec-common .btn-black,
+.sec-common .prev-btn {
+  width: 400px;
+  font-family: "Ryo Gothic PlusN", sans-serif;
+}
+
+/* Contact Us Content */
+.sec-contact .form {
+  width: 801px;
+  margin: 87px auto 0;
+}
+
+.sec-contact .field {
+  margin-bottom: 40px;
+}
+
+.sec-contact .d-flex {
+  display: flex;
+}
+
+.sec-contact .cmn-lbl,
+.sec-contact .cmn-input,
+.sec-contact .cmn-select {
+  display: block;
+  color: #34343b;
+  font-family: "Ryo Gothic PlusN", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.sec-contact .cmn-lbl {
+  line-height: 1.5;
+  margin-bottom: 9px;
+}
+
+.sec-contact .cmn-lbl span {
+  color: #7cbe41;
+  font-family: "ToppanBunkyuStdN-ExtraBold";
+  font-weight: 800;
+}
+
+.sec-contact .cmn-input,
+.sec-contact .cmn-select {
+  width: 100%;
+  padding: 17px 20px;
+  border: 1px solid #262627;
+  background-color: transparent;
+  outline: none;
+}
+
+::placeholder {
+  color: rgba(52, 52, 59, 0.5);
+}
+
+.sec-contact .field:first-child .cmn-input:first-child {
+  border-right: 0;
+}
+
+.sec-contact .cmn-select {
+  line-height: 2;
+  background: url("../img/ico_down_arr.png") no-repeat center right 20px/15px;
+}
+
+.sec-contact .cmn-select:nth-of-type(2) {
+  border-width: 1px 0;
+}
+
+.sec-contact .cmn-select:has(option:disabled:checked[hidden]) {
+  color: rgba(52, 52, 59, 0.5);
+}
+
+.sec-contact .cmn-select option {
+  color: #34343b;
+}
+
+.sec-contact .checkbox-blk {
+  position: relative;
+  margin-right: 46px;
+  padding-left: 35px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.sec-contact .checkbox-blk.cmn-lbl {
+  margin-bottom: 0;
+}
+
+.sec-contact .checkbox-blk.cmn-lbl span {
+  pointer-events: none;
+}
+
+.sec-contact .checkbox-blk input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.sec-contact .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #262627;
+}
+
+.sec-contact .checkmark::after {
+  display: none;
+  position: absolute;
+  content: "";
+}
+
+.sec-contact .checkbox-blk input:checked~.checkmark::after {
+  display: block;
+}
+
+.sec-contact .checkbox-blk .checkmark::after {
+  top: 1px;
+  left: 5.5px;
+  width: 6px;
+  height: 12px;
+  border: solid #7cbe41;
+  transform: rotate(45deg);
+  border-width: 0 4px 4px 0;
+}
+
+.sec-contact .checkbox-blk a {
+  color: #7cbe41;
+}
+
+.sec-contact textarea {
+  height: 211px;
+  resize: none;
+}
+
+.sec-contact .address .d-flex {
+  justify-content: space-between;
+}
+
+.sec-contact .col {
+  width: 49%;
+}
+
+.sec-contact .privacy {
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+}
+
+.sec-contact .privacy .cmn-lbl {
+  margin-right: 0;
+}
+
+.sec-contact .btn-blk {
+  padding-top: 20px;
+}
+
+/* Confirm Content */
+.sec-confirm .confirm-list {
+  width: 801px;
+  margin: 50px auto 0;
+}
+
+.sec-confirm .field {
+  display: flex;
+  align-items: center;
+  padding: 28px 0;
+  border-top: 2px solid #e2e8eb;
+}
+
+.sec-confirm .content {
+  align-items: flex-start;
+}
+
+.sec-confirm .privacy {
+  border-bottom: 2px solid #e2e8eb;
+}
+
+.sec-confirm .cmn-lbl {
+  width: 196px;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+.sec-confirm .cmn-lbl span {
+  color: #7cbe41;
+  font-family: "ToppanBunkyuStdN-ExtraBold";
+  font-weight: 800;
+}
+
+.sec-confirm .cmn-txt {
+  width: 75%;
+  line-height: 2.13;
+  padding-left: 24px;
+  color: rgba(52, 52, 59, 0.8);
+  letter-spacing: 0.87px;
+}
+
+.sec-confirm .btn-blk {
+  display: flex;
+  justify-content: center;
+  padding-top: 62px;
+}
+
+.sec-confirm .prev-btn {
+  margin-right: 30px;
+}
+
+.sec-confirm .prev-btn::before {
+  display: block;
+  right: 28px;
+  background: url("../img/ico_square01.png") no-repeat center/contain;
+  transition: all 0.5s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .sec-confirm .prev-btn:hover::before {
+    background: url("../img/ico_square02.png") no-repeat center/contain;
+  }
+}
+
+/* Complete Content */
+.sec-complete .btn-blk {
+  padding-top: 64px;
+}
+
+
+/* IPad */
+@media only screen and (min-width:768px) and (max-width:1280px) {
+  body {
+    font-size: 1.25vw;
+  }
+
+  /* Common Button */
+  .cmn-btn {
+    width: 22.5vw;
+    padding: 2.109vw 0.781vw;
+    border: 0.13vw solid rgba(13, 13, 15, 0.87);
+    font-size: 1.094vw;
+  }
+
+  .cmn-btn::before {
+    left: 2.344vw;
+    width: 1.016vw;
+    height: 1.016vw;
+  }
+
+  .cmn-btn::after {
+    right: 2.344vw;
+    width: 1.094vw;
+    height: 0.391vw;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .cmn-btn:hover {
+      border: 0.13vw solid #7cbe41;
+    }
+
+    .cmn-btn:hover::after {
+      right: 1.563vw;
+    }
+  }
+}
+
+/* SP */
+@media all and (max-width:767.9px) {
+  body {
+    font-size: 4.071vw;
+  }
+
+    /* Common Button */
+    .cmn-btn {
+      width: 73.282vw;
+      padding: 6.87vw 2.545vw;
+      border: 0.296vw solid rgba(13, 13, 15, 0.87);
+      font-size: 3.562vw;
+      letter-spacing: 0.687vw;
+    }
+
+    .cmn-btn::before {
+      left: 7.634vw;
+      width: 3.308vw;
+      height: 3.308vw;
+    }
+
+    .cmn-btn::after {
+      right: 7.634vw;
+      width: 3.562vw;
+      height: 1.272vw;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .cmn-btn:hover {
+        border: 0.296vw solid #7cbe41;
+      }
+
+      .cmn-btn:hover::after {
+        right: 5.089vw;
+      }
+    }
+}
